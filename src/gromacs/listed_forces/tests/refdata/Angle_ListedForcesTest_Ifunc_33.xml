@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="referencedata.xsl"?>
+<ReferenceData>
+  <FunctionType Name="KEATING">
+    <FEP Name="No">
+      <Real Name="Epot ">2.734218898885886</Real>
+      <Real Name="dVdlambda ">0</Real>
+      <Sequence Name="Forces">
+        <Int Name="Length">4</Int>
+        <Vector>
+          <Real Name="X">6.6556101369913607</Real>
+          <Real Name="Y">-82.892598978891499</Real>
+          <Real Name="Z">40.53871628894690</Real>
+        </Vector>
+        <Vector>
+          <Real Name="X">-129.82599207149602</Real>
+          <Real Name="Y">65.383990435914583</Real>
+          <Real Name="Z">95.920085919540313</Real>
+        </Vector>
+        <Vector>
+          <Real Name="X">129.79812540482931</Real>
+          <Real Name="Y">-65.03692376924738</Real>
+          <Real Name="Z">-96.089819252873909</Real>
+        </Vector>
+        <Vector>
+          <Real Name="X">-6.6277434703246501</Real>
+          <Real Name="Y">82.545532312224296</Real>
+          <Real Name="Z">-40.368982955613305</Real>
+        </Vector>
+      </Sequence>
+      <Shift-Forces Name="Shift-forces">
+        <Vector Name="Central">
+          <Real Name="X">2.6645352591003757e-15</Real>
+          <Real Name="Y">1.4210854715202004e-14</Real>
+          <Real Name="Z">0</Real>
+        </Vector>
+      </Shift-Forces>
+    </FEP>
+  </FunctionType>
+</ReferenceData>

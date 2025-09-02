@@ -318,6 +318,22 @@ public:
     {
         return setUreyBradley(thetaA, kthetaA, r13A, kUBA, thetaA, kthetaA, r13A, kUBA);
     }
+    /*! \brief Set parameters for Keating potential
+     *
+     * \param[in] b0    Equilibrium bond length
+     * \param[in] theta Equilibrium angle
+     * \param[in] beta  Keating beta
+     * \return The structure itself.
+     */
+    iListInput setKeating(real b0, real theta, real beta)
+    {
+        ftype                 = F_KEATING;
+        iparams.keating.b0    = b0;
+        iparams.keating.gamma = cos(theta*M_PI/180.0);
+        iparams.keating.beta  = beta;
+        fep = false;
+        return *this;
+    }
     /*! \brief Set parameters for Cross Bond Bonds potential
      *
      * \param[in] r1e  First bond length i-j
@@ -691,7 +707,8 @@ std::vector<iListInput> c_InputAngles = {
     { iListInput(3e-6, 1e-8).setCrossBondAngles(0.8, 0.7, 0.3, 45.0) },
     { iListInput(2e-2, 1e-8).setUreyBradley(950.0, 46.0, 0.3, 5.0) },
     { iListInput(2e-2, 1e-8).setUreyBradley(100.0, 45.0, 0.3, 5.0, 90.0, 47.0, 0.32, 7.0) },
-    { iListInput(2e-3, 1e-8).setQuarticAngles(87.0, cQuarticAngles) }
+    { iListInput(2e-3, 1e-8).setQuarticAngles(87.0, cQuarticAngles) },
+    { iListInput(2e-6, 1e-10).setKeating(0.15,100.0,4000.0) },
 };
 
 //! Constants for Ryckaert-Bellemans A
